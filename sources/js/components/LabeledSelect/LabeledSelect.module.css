@@ -1,0 +1,143 @@
+.input-wrapper {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row nowrap;
+    align-items: center;
+    border-radius: 4px;
+    outline: 2px solid transparent;
+    background-color: var(--labeled-select-background-color-default);
+    font-size: 1rem;
+    transition: all 0.15s;
+
+    &.small {
+        font-size: 0.8rem;
+    }
+
+    &.large {
+        font-size: 1.2rem;
+    }
+
+    &:has(*:focus) {
+        outline: 2px solid var(--labeled-select-focus-color);
+    }
+
+    &:has(.input:disabled) {
+        opacity: 0.7;
+        cursor: not-allowed;
+
+        & * {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.input-label {
+    padding: 0px 8px;
+    color: var(--labeled-select-label-text-color);
+    font-size: 1em;
+    font-weight: 700;
+    user-select: none;
+}
+
+.input {
+    padding: 4px 8px;
+    border: 2px solid var(--labeled-select-border-color-default);
+    border-radius: 0px 4px 4px 0px;
+    outline: 0;
+    font-size: 1em;
+}
+
+.input-wrapper > .input {
+    color: var(--labeled-select-text-color-default);
+    background-color: var(--labeled-select-inner-background-color-default);
+    font-weight: var(--labeled-select-font-weight-default);
+    transition: all 0.1s;
+
+    &::selection {
+        color: var(--labeled-select-inner-background-color-default);
+        background-color: var(--labeled-select-text-color-default);
+    }
+
+    &:hover {
+        background-color: var(--labeled-select-inner-background-color-hover);
+    }
+
+    &:focus {
+        background-color: var(--labeled-select-inner-background-color-focus);
+    }
+}
+
+.input-wrapper.reverse > .input {
+    color: var(--labeled-select-text-color-default-reverse);
+    background-color: var(
+        --labeled-select-inner-background-color-default-reverse
+    );
+    font-weight: var(--labeled-select-font-weight-reverse);
+
+    &::selection {
+        color: var(--labeled-select-inner-background-color-default-reverse);
+        background-color: var(--labeled-select-text-color-default-reverse);
+    }
+
+    &:hover {
+        background-color: var(
+            --labeled-select-inner-background-color-hover-reverse
+        );
+    }
+
+    &:focus {
+        background-color: var(
+            --labeled-select-inner-background-color-focus-reverse
+        );
+    }
+}
+
+.input-wrapper {
+    &.red {
+        background-color: var(--color-red);
+
+        & .input {
+            border-color: var(--color-red);
+        }
+    }
+
+    &.orange {
+        background-color: var(--color-orange);
+
+        & .input {
+            border-color: var(--color-orange);
+        }
+    }
+
+    &.yellow {
+        background-color: var(--color-yellow);
+
+        & .input {
+            border-color: var(--color-yellow);
+        }
+    }
+
+    &.green {
+        background-color: var(--color-green);
+
+        & .input {
+            border-color: var(--color-green);
+        }
+    }
+
+    &.blue {
+        background-color: var(--color-blue);
+
+        & .input {
+            border-color: var(--color-blue);
+        }
+    }
+
+    &.purple {
+        background-color: var(--color-purple);
+
+        & .input {
+            border-color: var(--color-purple);
+        }
+    }
+}

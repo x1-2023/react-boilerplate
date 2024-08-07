@@ -1,0 +1,16 @@
+.header-brand-logo {
+    height: 100%;
+    user-select: none;
+
+    & > img {
+        width: auto;
+        height: 100%;
+        padding: 12px;
+        filter: brightness(1);
+        transition: all 0.1s;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+    }
+}

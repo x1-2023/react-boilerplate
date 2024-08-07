@@ -1,0 +1,101 @@
+select.select {
+    --select-text-color: var(--color-white);
+    --select-background-color: var(--color-black);
+    --select-border-color-default: var(--color-white);
+    --select-border-color-focus: var(--color-primary);
+    --select-border-width: 2px;
+    --select-border-radius: 6px;
+    padding: 4px 8px;
+    border: var(--select-border-width) solid var(--select-border-color-default);
+    border-radius: var(--select-border-radius);
+    font-size: 1rem;
+    filter: brightness(1);
+    color: var(--select-text-color);
+    background-color: var(--select-background-color);
+    transition: all 0.15s;
+
+    &:focus {
+        outline: 0;
+        border-color: var(--select-border-color-focus);
+    }
+
+    &:disabled {
+        filter: brightness(0.65);
+    }
+
+    &.alt {
+        --select-border-color-default: var(--color-primary);
+        --select-border-color-focus: var(--color-white);
+    }
+
+    &.small {
+        font-size: 0.8rem;
+    }
+
+    &.large {
+        font-size: 1.2rem;
+    }
+
+    &.red {
+        --select-border-color-default: var(--color-white);
+        --select-border-color-focus: var(--color-red);
+        &.alt {
+            --select-border-color-default: var(--color-red);
+            --select-border-color-focus: var(--color-white);
+        }
+    }
+
+    &.red {
+        --select-border-color-default: var(--color-white);
+        --select-border-color-focus: var(--color-red);
+        &.alt {
+            --select-border-color-default: var(--color-red);
+            --select-border-color-focus: var(--color-white);
+        }
+    }
+
+    &.orange {
+        --select-border-color-default: var(--color-white);
+        --select-border-color-focus: var(--color-orange);
+        &.alt {
+            --select-border-color-default: var(--color-orange);
+            --select-border-color-focus: var(--color-white);
+        }
+    }
+
+    &.yellow {
+        --select-border-color-default: var(--color-white);
+        --select-border-color-focus: var(--color-yellow);
+        &.alt {
+            --select-border-color-default: var(--color-yellow);
+            --select-border-color-focus: var(--color-white);
+        }
+    }
+
+    &.green {
+        --select-border-color-default: var(--color-white);
+        --select-border-color-focus: var(--color-green);
+        &.alt {
+            --select-border-color-default: var(--color-green);
+            --select-border-color-focus: var(--color-white);
+        }
+    }
+
+    &.blue {
+        --select-border-color-default: var(--color-white);
+        --select-border-color-focus: var(--color-blue);
+        &.alt {
+            --select-border-color-default: var(--color-blue);
+            --select-border-color-focus: var(--color-white);
+        }
+    }
+
+    &.purple {
+        --select-border-color-default: var(--color-white);
+        --select-border-color-focus: var(--color-purple);
+        &.alt {
+            --select-border-color-default: var(--color-purple);
+            --select-border-color-focus: var(--color-white);
+        }
+    }
+}

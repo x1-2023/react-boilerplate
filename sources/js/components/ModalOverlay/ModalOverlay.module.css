@@ -1,0 +1,117 @@
+@keyframes modal-overlay-fade-in {
+    from {
+        visibility: collapse;
+        background-color: transparent;
+    }
+    to {
+        visibility: visible;
+        background-color: var(--modal-overlay-background-color);
+    }
+}
+
+@keyframes modal-overlay-fade-out {
+    from {
+        visibility: visible;
+        background-color: var(--modal-overlay-background-color);
+    }
+    to {
+        visibility: collapse;
+        background-color: transparent;
+    }
+}
+
+@keyframes modal-window-fade-in {
+    from {
+        opacity: 0;
+        visibility: collapse;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes modal-window-fade-out {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: collapse;
+    }
+}
+
+.modal-overlay {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 100;
+    visibility: collapse;
+
+    &.is-open {
+        animation: modal-overlay-fade-in 0.1s linear forwards;
+    }
+
+    &.is-close {
+        animation: modal-overlay-fade-out 0.1s linear forwards;
+    }
+
+    &.is-hidden {
+        display: none !important;
+    }
+
+    & > .modal-window {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: var(--modal-window-width);
+        height: var(--modal-window-height);
+        max-width: calc(100% - var(--modal-window-margin));
+        max-height: calc(100% - var(--modal-window-margin));
+        margin: auto;
+        border: var(--modal-window-border-width) solid
+            var(--modal-window-border-color);
+        border-radius: var(--modal-window-border-radius);
+        color: var(--modal-window-text-color);
+        background-color: var(--modal-window-background-color);
+        overflow: hidden;
+        will-change: opacity, transform;
+        filter: blur(0);
+        -webkit-filter: blur(0);
+
+        &:empty {
+            display: none;
+            width: max-content;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        &:empty::before {
+            content: 'This modal window is empty.';
+        }
+
+        &.is-open {
+            animation: modal-window-fade-in 0.1s linear forwards;
+        }
+
+        &.is-close {
+            animation: modal-window-fade-out 0.1s linear forwards;
+        }
+
+        &.is-hidden {
+            display: none !important;
+        }
+    }
+}

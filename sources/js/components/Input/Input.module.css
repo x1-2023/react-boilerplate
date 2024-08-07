@@ -1,0 +1,193 @@
+div.input-wrapper {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+
+    & > i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1em;
+        z-index: 1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        display: block;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: calc(var(--input-border-radius) - 1px);
+        background-color: var(--input-background-color-default);
+        filter: brightness(1);
+        transition: all 0.15s;
+    }
+
+    &:hover::before {
+        background-color: var(--input-background-color-hover);
+        filter: brightness(1.2);
+    }
+
+    &:active::before {
+        background-color: var(--input-background-color-active);
+    }
+
+    &:focus-within::before {
+        background-color: var(--input-background-color-focus);
+        filter: brightness(1.3);
+    }
+
+    & > input[type='text'],
+    & > input[type='email'],
+    & > input[type='password'] {
+        display: block;
+        width: 100%;
+        padding: var(--input-padding-top-bottom) var(--input-padding-left-right);
+        border: var(--input-border-width) solid
+            var(--input-border-color-default);
+        border-radius: var(--input-border-radius);
+        outline: none;
+        color: var(--input-text-color-default);
+        background-color: transparent;
+        font-size: 1em;
+        filter: brightness(1);
+        z-index: 0;
+        transition: all 0.15s;
+
+        &:hover {
+            color: var(--input-text-color-hover);
+            border: var(--input-border-width) solid
+                var(--input-border-color-hover);
+        }
+
+        &:active {
+            color: var(--input-text-color-active);
+            border: var(--input-border-width) solid
+                var(--input-border-color-active);
+        }
+
+        &:focus {
+            color: var(--input-text-color-focus);
+            border: var(--input-border-width) solid
+                var(--input-border-color-focus);
+        }
+
+        &:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+
+    /* Modifier classes */
+
+    &.icon-left {
+        & > i {
+            right: initial;
+            left: calc(
+                var(--input-border-width) + var(--input-padding-left-right) +
+                    var(--input-icon-extra-padding)
+            );
+        }
+
+        & > input[type='text'],
+        & > input[type='email'],
+        & > input[type='password'] {
+            padding: var(--input-padding-top-bottom)
+                var(--input-padding-left-right) var(--input-padding-top-bottom)
+                calc(
+                    var(--input-padding-left-right) * 2 + 1em + 1px +
+                        (var(--input-icon-extra-padding) * 2)
+                );
+        }
+    }
+
+    &.icon-right {
+        & > i {
+            left: initial;
+            right: calc(
+                var(--input-border-width) + var(--input-padding-left-right) +
+                    var(--input-icon-extra-padding)
+            );
+        }
+
+        & > input[type='text'],
+        & > input[type='email'],
+        & > input[type='password'] {
+            padding: var(--input-padding-top-bottom)
+                calc(
+                    var(--input-padding-left-right) * 2 + 1em + 1px +
+                        (var(--input-icon-extra-padding) * 2)
+                )
+                var(--input-padding-top-bottom) var(--input-padding-left-right);
+        }
+    }
+
+    &.small {
+        font-size: 0.8rem;
+    }
+
+    &.large {
+        font-size: 1.2rem;
+    }
+
+    &.transparent {
+        --input-background-color-default: transparent;
+        --input-background-color-hover: transparent;
+        --input-background-color-active: transparent;
+        --input-background-color-focus: transparent;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            display: block;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            border-radius: calc(var(--input-border-radius) - 1px);
+            background-color: rgba(255, 255, 255, 0);
+            transition: all 0.15s;
+        }
+
+        &:hover::before {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        &:active::before {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        &:focus-within::before {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+    }
+
+    /* Color modifier classes */
+
+    &.red {
+        --input-border-color-focus: var(--color-red);
+    }
+
+    &.orange {
+        --input-border-color-focus: var(--color-orange);
+    }
+
+    &.yellow {
+        --input-border-color-focus: var(--color-yellow);
+    }
+
+    &.green {
+        --input-border-color-focus: var(--color-green);
+    }
+
+    &.blue {
+        --input-border-color-focus: var(--color-blue);
+    }
+
+    &.purple {
+        --input-border-color-focus: var(--color-purple);
+    }
+}

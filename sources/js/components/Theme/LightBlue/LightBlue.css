@@ -1,0 +1,303 @@
+:root {
+    /* Predefined color variables */
+    --color-white: #fcfcfa;
+    --color-black: #2d2a2e;
+    --color-black-bright: #423f42;
+    --color-gray: #727072;
+    --color-gray-bright: #807e80;
+    --color-gray-darker: #666466;
+    --color-red: #ff144f;
+    --color-red-bright: #ff7093;
+    --color-red-darker: #e5577a;
+    --color-red-vibrant: #ff144f;
+    --color-orange: #fa681e;
+    --color-orange-bright: #fca478;
+    --color-orange-darker: #e28a5e;
+    --color-orange-vibrant: #fa681e;
+    --color-yellow: #ffc61a;
+    --color-yellow-bright: #ffdc75;
+    --color-yellow-darker: #e5c35b;
+    --color-yellow-vibrant: #ffc61a;
+    --color-green: #82cc38;
+    --color-green-bright: #b0de82;
+    --color-green-darker: #97c569;
+    --color-green-vibrant: #82cc38;
+    --color-blue: #36ccdd;
+    --color-blue-bright: #85e0ea;
+    --color-blue-darker: #6cc6d0;
+    --color-blue-vibrant: #36ccdd;
+    --color-purple: #7058e9;
+    --color-purple-bright: #b2a5f3;
+    --color-purple-darker: #998cd9;
+    --color-purple-vibrant: #7058e9;
+
+    --text-light: #333333;
+    --text-light-hover: #333333;
+    --text-light-highlight: var(--color-primary);
+    --text-light-dim: #333333;
+    --background-light: #f9f5f3;
+    --background-light-highlight: #e8ebed;
+    --shadow-light: #00000033;
+
+    --context-text-light: #333333;
+    --context-text-light-hover: #333333;
+    --context-text-light-highlight: var(--color-primary);
+    --context-text-light-dim: #6b6b6b;
+    --context-background-light: #f4f4f4;
+    --context-background-light-highlight: #e8ebed;
+    --context-shadow-light: #00000033;
+
+    --text-dark: #f9f5f3;
+    --text-dark-hover: #f9f5f3;
+    --text-dark-highlight: #f9f5f3;
+    --text-dark-dim: #f9f5f3;
+    --background-dark: #333333;
+    --background-dark-highlight: #6b6b6b;
+    --shadow-dark: #3333333c;
+
+    --context-text-dark: blue;
+    --context-text-dark-hover: blue;
+    --context-text-dark-highlight: blue;
+    --context-text-dark-dim: blue;
+    --context-background-dark: blue;
+    --context-background-dark-highlight: blue;
+    --context-shadow-dark: blue;
+
+    --color-primary: var(--color-blue);
+    --color-success: var(--color-green);
+    --color-warning: var(--color-yellow);
+    --color-danger: var(--color-red);
+
+    --color-scrollbar-background: var(--color-black);
+    --color-scrollbar-thumb-background-default: var(--color-gray);
+    --color-scrollbar-thumb-background-hover: var(--color-gray-bright);
+    --color-scrollbar-thumb-background-active: var(--color-gray-darker);
+
+    /* Component variables */
+    --header-height: 56.8px;
+    --header-background-color: var(--background-light);
+    --header-shadow-color: var(--shadow-light);
+    --header-text-color: var(--text-light-dim);
+    --header-brand-text: var(--text-light);
+
+    --header-icon-button-icon-color-default: var(--text-light-dim);
+    --header-icon-button-background-color-default: var(
+        --header-background-color
+    );
+    --header-icon-button-icon-color-hover: var(--text-light-hover);
+    --header-icon-button-background-color-hover: var(
+        --background-light-highlight
+    );
+    --header-icon-button-icon-color-active: var(--text-light-hover);
+    --header-icon-button-background-color-active: var(
+        --background-light-highlight
+    );
+    --header-icon-button-icon-color-open: var(--text-light-hover);
+
+    --footer-height: 140px;
+    --footer-background-color: #f9f5f3;
+    --footer-text-color: var(--text-light);
+    --footer-border-top: 2px solid rgba(0, 0, 0, 0.1);
+
+    --navbar-item-background-color-default: var(--background-light);
+    --navbar-item-background-color-hover: var(--background-light-highlight);
+    --navbar-item-background-color-active: var(--background-light-highlight);
+    --navbar-item-background-color-link-active: var(
+        --background-light-highlight
+    );
+    --navbar-item-background-color-link-pending: var(
+        --background-light-highlight
+    );
+
+    --navbar-item-text-color-default: var(--text-light-dim);
+    --navbar-item-text-color-hover: var(--text-light);
+    --navbar-item-text-color-active: var(--text-light);
+    --navbar-item-text-color-link-active: var(--text-light-highlight);
+    --navbar-item-text-color-link-pending: var(--navbar-item-text-color-hover);
+
+    --navbar-subitem-background-color-default: var(--context-background-light);
+    --navbar-subitem-background-color-hover: var(
+        --context-background-light-highlight
+    );
+    --navbar-subitem-background-color-active: var(
+        --context-background-light-highlight
+    );
+    --navbar-subitem-background-color-link-active: var(
+        --navbar-subitem-background-color-hover
+    );
+    --navbar-subitem-background-color-link-pending: var(
+        --navbar-subitem-background-color-hover
+    );
+    --navbar-subitem-text-color-default: var(--context-text-light);
+    --navbar-subitem-text-color-hover: var(--context-text-light-highlight);
+    --navbar-subitem-text-color-active: var(--context-text-light-highlight);
+    --navbar-subitem-text-color-link-active: var(
+        --context-text-light-highlight
+    );
+    --navbar-subitem-text-color-link-pending: var(
+        --navbar-subitem-text-color-hover
+    );
+    --navbar-subitem-desc-text-default: var(--context-text-light-dim);
+
+    --navbar-sublist-background-color: var(--context-background-light);
+    --navbar-sublist-border-color: transparent;
+    --navbar-sublist-border-width: 0px;
+    --navbar-sublist-border-radius: 10px;
+    --navbar-sublist-shadow-color: var(--context-shadow-light);
+
+    --mobile-navbar-blur-layer-background-color: #0006;
+    --mobile-navbar-background-color: var(--context-background-light);
+    --mobile-navbar-shadow-color: #00000033;
+    --mobile-navbar-close-color-default: var(--context-text-light-dim);
+    --mobile-navbar-close-color-hover: var(--context-text-light);
+    --mobile-navbar-close-background-color-highlight: var(
+        --context-background-light-highlight
+    );
+    --mobile-navbar-section-title-text-color: var(--context-text-light-dim);
+    --mobile-navbar-item-text-color-default: var(--context-text-light);
+    --mobile-navbar-item-background-color-default: var(
+        --context-background-light
+    );
+    --mobile-navbar-item-background-color-highlight: var(
+        --context-background-light-highlight
+    );
+    --mobile-navbar-item-text-color-highlight: var(
+        --context-text-light-highlight
+    );
+    --mobile-navbar-item-desc-text-color: var(--context-text-light-dim);
+
+    --popup-window-text-color: var(--context-text-light);
+    --popup-window-background-color: var(--context-background-light);
+    --popup-window-padding: 10px;
+    --popup-window-border-color: var(--context-background-light);
+    --popup-window-border-width: 2px;
+    --popup-window-border-radius: 4px;
+    --popup-window-shadow-color: var(--context-shadow-light);
+
+    --context-item-text-color-highlight: var(--context-text-light-highlight);
+    --context-item-background-color-highlight: var(
+        --context-background-light-highlight
+    );
+
+    --context-text: var(--context-text-light);
+    --context-text-hover: var(--context-text-light-hover);
+    --context-text-highlight: var(--context-text-light-highlight);
+    --context-text-dim: var(--context-text-light-dim);
+    --context-background: var(--context-background-light);
+    --context-background-highlight: var(--context-background-light-highlight);
+    --context-shadow: var(--context-shadow-light);
+
+    --toast-shadow-color: var(--shadow-dark);
+
+    --modal-overlay-background-color: #0006;
+    --modal-window-margin: 50px;
+    --modal-window-width: auto;
+    --modal-window-height: auto;
+    --modal-window-border-width: 2px;
+    --modal-window-border-radius: 4px;
+    --modal-window-border-color: var(--color-gray);
+    --modal-window-text-color: var(--context-text);
+    --modal-window-background-color: var(--context-background);
+
+    --button-text-color-default: var(--color-white);
+    --button-text-color-hover: var(--color-white);
+    --button-text-color-active: var(--color-white);
+    --button-background-color-default: var(--color-primary);
+    --button-background-color-hover: var(--color-primary);
+    --button-background-color-active: var(--color-primary);
+    --button-border-color-default: var(--color-primary);
+    --button-border-color-hover: var(--color-primary);
+    --button-border-color-active: var(--color-primary);
+    --button-focus-border-color: var(--color-white);
+    --button-border-width: 2px;
+    --button-border-radius: 6px;
+    --button-padding-left-right: 10px;
+    --button-padding-top-bottom: 4px;
+
+    --input-text-color-default: var(--text-light);
+    --input-text-color-hover: var(--input-text-color-default);
+    --input-text-color-active: var(--input-text-color-default);
+    --input-text-color-focus: var(--input-text-color-default);
+    --input-background-color-default: var(--context-background-light);
+    --input-background-color-hover: var(--input-background-color-default);
+    --input-background-color-active: var(--input-background-color-default);
+    --input-background-color-focus: var(--input-background-color-default);
+    --input-border-color-default: var(--background-dark);
+    --input-border-color-hover: var(--input-border-color-default);
+    --input-border-color-active: var(--input-border-color-default);
+    --input-border-color-focus: var(--color-primary);
+    --input-border-width: 2px;
+    --input-border-radius: 6px;
+    --input-padding-left-right: 4px;
+    --input-padding-top-bottom: 4px;
+    --input-icon-extra-padding: 4px;
+
+    --labeled-input-label-text-color: var(--color-white);
+    --labeled-input-text-color-default: var(--text-light);
+    --labeled-input-inner-background-color-default: var(--color-white);
+    --labeled-input-inner-background-color-hover: var(--color-white);
+    --labeled-input-inner-background-color-focus: var(--color-white);
+    --labeled-input-background-color-default: var(--color-primary);
+    --labeled-input-border-color-default: var(--color-primary);
+    --labeled-input-focus-color: var(--color-white);
+    --labeled-input-font-weight-default: 400;
+    --labeled-input-text-color-default-reverse: var(--color-white);
+    --labeled-input-inner-background-color-default-reverse: var(--color-black);
+    --labeled-input-inner-background-color-hover-reverse: var(
+        --color-black-bright
+    );
+    --labeled-input-inner-background-color-focus-reverse: var(
+        --color-black-bright
+    );
+    --labeled-input-font-weight-reverse: 500;
+
+    --labeled-select-label-text-color: var(--color-white);
+    --labeled-select-text-color-default: var(--text-light);
+    --labeled-select-inner-background-color-default: var(--color-white);
+    --labeled-select-inner-background-color-hover: var(--color-white);
+    --labeled-select-inner-background-color-focus: var(--color-white);
+    --labeled-select-background-color-default: var(--color-primary);
+    --labeled-select-border-color-default: var(--color-primary);
+    --labeled-select-focus-color: var(--color-white);
+    --labeled-select-font-weight-default: 400;
+    --labeled-select-text-color-default-reverse: var(--color-white);
+    --labeled-select-inner-background-color-default-reverse: var(--color-black);
+    --labeled-select-inner-background-color-hover-reverse: var(
+        --color-black-bright
+    );
+    --labeled-select-inner-background-color-focus-reverse: var(
+        --color-black-bright
+    );
+    --labeled-select-font-weight-reverse: 500;
+
+    --server-message-text-color-info: var(--color-blue);
+    --server-message-background-color-info: rgba(120, 221, 232, 0.2);
+    --server-message-border-color-info: var(--color-blue);
+    --server-message-text-color-error: var(--color-danger);
+    --server-message-background-color-error: rgba(255, 97, 136, 0.2);
+    --server-message-border-color-error: var(--color-danger);
+    --server-message-text-color-success: var(--color-success);
+    --server-message-background-color-success: rgba(168, 219, 117, 0.2);
+    --server-message-border-color-success: var(--color-success);
+
+    /* General variables */
+    --general-font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans',
+        'Poppins', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji';
+    --general-text-color: #333333;
+    --general-body-background-color: #f9f5f3;
+    --general-body-background-gradient-color: linear-gradient(
+        to bottom,
+        #f9f5f3,
+        #f9f5f3
+    );
+}
+
+html {
+    font-weight: 500;
+}
+
+::selection {
+    color: var(--text-dark);
+    background-color: var(--background-dark);
+}

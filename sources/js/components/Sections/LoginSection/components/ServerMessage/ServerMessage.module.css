@@ -1,0 +1,66 @@
+.server-message-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 288px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid var(--server-message-border-color-info);
+    border-radius: 10px;
+    color: var(--server-message-text-color-info);
+    background-color: var(--server-message-background-color-info);
+
+    & .server-message-delete:hover {
+        color: var(--server-message-border-color-info);
+    }
+
+    &.error {
+        border-color: var(--server-message-border-color-error);
+        color: var(--server-message-text-color-error);
+        background-color: var(--server-message-background-color-error);
+
+        & .server-message-delete:hover {
+            color: var(--server-message-border-color-error);
+        }
+    }
+
+    &.success {
+        border-color: var(--server-message-border-color-success);
+        color: var(--server-message-text-color-success);
+        background-color: var(--server-message-background-color-success);
+
+        & .server-message-delete:hover {
+            color: var(--server-message-border-color-success);
+        }
+    }
+}
+
+.server-message {
+    margin-right: 5px;
+    color: var(--server-message-text-color);
+    text-align: left;
+}
+
+.server-message-delete {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -6px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 3px 6px;
+    }
+
+    &:hover {
+        color: var(--color-blue);
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}

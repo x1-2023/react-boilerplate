@@ -1,0 +1,60 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 13px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+    padding: 0px 20px;
+    border-top: var(--footer-border-top);
+    color: var(--footer-text-color);
+    background-color: var(--footer-background-color);
+    overflow: hidden;
+}
+
+.copyright-text {
+    text-align: center;
+}
+
+.info-brands {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 8px;
+
+    & > a {
+        display: block;
+        width: 30px;
+        color: inherit;
+        transition: color 0.15s;
+        will-change: color;
+        cursor: pointer;
+
+        &.github:hover {
+            color: #3a3a3a;
+        }
+        &.discord:hover {
+            color: #5868f2;
+        }
+        &.youtube:hover {
+            color: #ff0000;
+        }
+        &.facebook:hover {
+            color: #0866ff;
+        }
+    }
+}
+
+.link {
+    color: var(--footer-text-color);
+    text-decoration: underline;
+    filter: brightness(1);
+    transition: all 0.1s;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.2);
+    }
+}

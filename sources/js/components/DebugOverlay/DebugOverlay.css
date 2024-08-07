@@ -1,0 +1,29 @@
+#debug-overlay {
+    --debug-overlay-background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--debug-overlay-background-color);
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 100;
+
+    & > h5 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        border-radius: 8px;
+        white-space: nowrap;
+        background-color: var(--color-orange);
+    }
+}

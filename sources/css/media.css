@@ -1,0 +1,26 @@
+/**
+ * @file media.css
+ * @description Media queries styles.
+ */
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+}
+
+/* Tablet */
+@media only screen and (max-device-width: 1024px) and (min-device-width: 741px),
+    only screen and (max-width: 1024px) and (min-width: 741px) {
+}
+
+/* Mobile */
+@media only screen and (max-device-width: 740px),
+    only screen and (max-width: 740px) {
+    @media only screen and (max-device-width: 240px),
+        only screen and (max-width: 240px) {
+        html,
+        body,
+        #root {
+            overflow: hidden !important;
+        }
+    }
+}
