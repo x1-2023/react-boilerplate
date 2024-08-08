@@ -27,19 +27,17 @@
     color: var(--popup-window-text-color);
     background-color: var(--popup-window-background-color);
     box-shadow: 0px 0px 8px 4px var(--popup-window-shadow-color);
+}
 
-    &:empty {
-        &:before {
-            content: 'This drop-down window is empty.';
-            font-size: small;
-        }
-    }
+.popup-window:empty:before {
+    content: 'This drop-down window is empty.';
+    font-size: small;
+}
 
-    &.animation-in {
-        animation: popup-in 0.1s linear forwards;
-    }
+.popup-window.animation-in {
+    animation: popup-in 0.1s linear forwards;
+}
 
-    &.animation-out {
-        animation: popup-out 0.1s linear forwards;
-    }
+.popup-window.animation-out {
+    animation: popup-out 0.1s linear forwards;
 }
