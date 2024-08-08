@@ -76,6 +76,15 @@ input.input:disabled {
     pointer-events: none;
 }
 
+input[type='number'].input {
+    appearance: textfield;
+}
+input[type='number'].input *,
+input[type='number'].input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 div.input-wrapper.icon-left > .input-icon {
     right: initial;
     left: calc(

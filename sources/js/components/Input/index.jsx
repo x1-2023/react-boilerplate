@@ -75,7 +75,7 @@ function Input({
 }
 
 Input.propTypes = {
-    type: PropTypes.oneOf(['text', 'email', 'password']),
+    type: PropTypes.oneOf(['text', 'email', 'password', 'tel', 'number']),
     color: PropTypes.oneOf([
         'red',
         'orange',
