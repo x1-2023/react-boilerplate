@@ -11,9 +11,10 @@ const Dotenv = require('dotenv-webpack'); // Dotenv: Enable support for environm
 console.log('Using Webpack production configuration ...');
 
 module.exports = {
+    target: ['web', 'es5'],
     entry: {
-        style: './sources/js/style.js',
-        index: './sources/js/entry.jsx',
+        style: ['@babel/polyfill', './sources/js/style.js'],
+        index: ['@babel/polyfill', './sources/js/entry.jsx'],
     },
     output: {
         filename: '[name].[contenthash].bundle.js', // [contenthash] used to purge caches on file content changes.

@@ -22,11 +22,15 @@ function BrandLogo({ id, className }) {
     return (
         <Link
             id={id}
-            className={`${styles['header-brand-logo']} ${className || ''}`}
+            className={`${styles['link']} ${className || ''}`}
             to={routes.home}
             tabIndex={-1}
         >
-            <img src="/assets/static/img/brand-logo.png" alt="Brand Logo" />
+            <img
+                className={styles['logo']}
+                src="/assets/static/img/brand-logo.png"
+                alt="Brand Logo"
+            />
         </Link>
     );
 }

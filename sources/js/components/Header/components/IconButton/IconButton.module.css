@@ -6,39 +6,39 @@
     width: calc(var(--header-height) * 0.83333);
     height: var(--header-height);
     font-size: calc(var(--header-height) * 0.45);
+}
 
-    &:hover > .header-icon-button-icon {
-        color: var(--header-icon-button-icon-color-hover);
+.header-icon-button:hover > .header-icon-button-icon {
+    color: var(--header-icon-button-icon-color-hover);
+    background-color: var(--header-icon-button-background-color-hover);
+}
+
+.header-icon-button.is-popup-open {
+    & > .header-icon-button-icon {
+        color: var(--header-icon-button-icon-color-open);
         background-color: var(--header-icon-button-background-color-hover);
     }
+}
 
-    & > .header-icon-button-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        height: 70%;
-        border-radius: 4px;
-        width: calc(var(--header-height) * 0.675);
-        height: calc(var(--header-height) * 0.675);
-        border-radius: 4px;
-        color: var(--header-icon-button-icon-color-default);
-        background-color: var(--header-icon-button-background-color-default);
-        text-decoration: none;
-        opacity: 1;
-        transition: all 0.15s;
+.header-icon-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 4px;
+    width: calc(var(--header-height) * 0.675);
+    height: calc(var(--header-height) * 0.675);
+    border-radius: 4px;
+    color: var(--header-icon-button-icon-color-default);
+    background-color: var(--header-icon-button-background-color-default);
+    text-decoration: none;
+    opacity: 1;
+    transition: all 0.15s;
 
-        &:active {
-            color: var(--header-icon-button-icon-color-active);
-            background-color: var(--header-icon-button-background-color-hover);
-            opacity: 0.7;
-        }
-    }
-
-    &.is-popup-open {
-        & > .header-icon-button-icon {
-            color: var(--header-icon-button-icon-color-open);
-            background-color: var(--header-icon-button-background-color-hover);
-        }
+    &:active {
+        color: var(--header-icon-button-icon-color-active);
+        background-color: var(--header-icon-button-background-color-hover);
+        opacity: 0.7;
     }
 }

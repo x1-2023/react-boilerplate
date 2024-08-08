@@ -15,13 +15,9 @@ import * as styles from './BrandText.module.css';
  */
 function BrandText() {
     return (
-        <Link
-            className={styles['header-brand-text']}
-            to={routes.home}
-            tabIndex={-1}
-        >
-            <div>
-                <h1>React Project</h1>
+        <Link className={styles['link']} to={routes.home} tabIndex={-1}>
+            <div className={styles['text-wrapper']}>
+                <h1 className={styles['text']}>React Project</h1>
             </div>
         </Link>
     );

@@ -2,192 +2,177 @@ div.input-wrapper {
     position: relative;
     display: inline-block;
     font-size: 1rem;
+}
 
-    & > i {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1em;
-        z-index: 1;
-    }
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    z-index: 1;
+}
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: 1px;
-        top: 1px;
-        display: block;
-        width: calc(100% - 2px);
-        height: calc(100% - 2px);
-        border-radius: calc(var(--input-border-radius) - 1px);
-        background-color: var(--input-background-color-default);
-        filter: brightness(1);
-        transition: all 0.15s;
-    }
+div.input-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    display: block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: calc(var(--input-border-radius) - 1px);
+    background-color: var(--input-background-color-default);
+    filter: brightness(1);
+    transition: all 0.15s;
+}
 
-    &:hover::before {
-        background-color: var(--input-background-color-hover);
-        filter: brightness(1.2);
-    }
+div.input-wrapper:hover::before {
+    background-color: var(--input-background-color-hover);
+    filter: brightness(1.2);
+}
 
-    &:active::before {
-        background-color: var(--input-background-color-active);
-    }
+div.input-wrapper:active::before {
+    background-color: var(--input-background-color-active);
+}
 
-    &:focus-within::before {
-        background-color: var(--input-background-color-focus);
-        filter: brightness(1.3);
-    }
+div.input-wrapper:focus-within::before {
+    background-color: var(--input-background-color-focus);
+    filter: brightness(1.3);
+}
 
-    & > input[type='text'],
-    & > input[type='email'],
-    & > input[type='password'] {
-        display: block;
-        width: 100%;
-        padding: var(--input-padding-top-bottom) var(--input-padding-left-right);
-        border: var(--input-border-width) solid
-            var(--input-border-color-default);
-        border-radius: var(--input-border-radius);
-        outline: none;
-        color: var(--input-text-color-default);
-        background-color: transparent;
-        font-size: 1em;
-        filter: brightness(1);
-        z-index: 0;
-        transition: all 0.15s;
+input.input {
+    display: block;
+    width: 100%;
+    padding: var(--input-padding-top-bottom) var(--input-padding-left-right);
+    border: var(--input-border-width) solid var(--input-border-color-default);
+    border-radius: var(--input-border-radius);
+    outline: none;
+    color: var(--input-text-color-default);
+    background-color: transparent;
+    font-size: 1em;
+    filter: brightness(1);
+    z-index: 0;
+    transition: all 0.15s;
+}
 
-        &:hover {
-            color: var(--input-text-color-hover);
-            border: var(--input-border-width) solid
-                var(--input-border-color-hover);
-        }
+input.input:hover {
+    color: var(--input-text-color-hover);
+    border: var(--input-border-width) solid var(--input-border-color-hover);
+}
 
-        &:active {
-            color: var(--input-text-color-active);
-            border: var(--input-border-width) solid
-                var(--input-border-color-active);
-        }
+input.input:active {
+    color: var(--input-text-color-active);
+    border: var(--input-border-width) solid var(--input-border-color-active);
+}
 
-        &:focus {
-            color: var(--input-text-color-focus);
-            border: var(--input-border-width) solid
-                var(--input-border-color-focus);
-        }
+input.input:focus {
+    color: var(--input-text-color-focus);
+    border: var(--input-border-width) solid var(--input-border-color-focus);
+}
 
-        &:disabled {
-            opacity: 0.65;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-    }
+input.input:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    pointer-events: none;
+}
 
-    /* Modifier classes */
+div.input-wrapper.icon-left > .input-icon {
+    right: initial;
+    left: calc(
+        var(--input-border-width) + var(--input-padding-left-right) +
+            var(--input-icon-extra-padding)
+    );
+}
 
-    &.icon-left {
-        & > i {
-            right: initial;
-            left: calc(
-                var(--input-border-width) + var(--input-padding-left-right) +
-                    var(--input-icon-extra-padding)
-            );
-        }
+div.input-wrapper.icon-left > .input {
+    padding: var(--input-padding-top-bottom) var(--input-padding-left-right)
+        var(--input-padding-top-bottom)
+        calc(
+            var(--input-padding-left-right) * 2 + 1em + 1px +
+                (var(--input-icon-extra-padding) * 2)
+        );
+}
 
-        & > input[type='text'],
-        & > input[type='email'],
-        & > input[type='password'] {
-            padding: var(--input-padding-top-bottom)
-                var(--input-padding-left-right) var(--input-padding-top-bottom)
-                calc(
-                    var(--input-padding-left-right) * 2 + 1em + 1px +
-                        (var(--input-icon-extra-padding) * 2)
-                );
-        }
-    }
+div.input-wrapper.icon-right > .input-icon {
+    left: initial;
+    right: calc(
+        var(--input-border-width) + var(--input-padding-left-right) +
+            var(--input-icon-extra-padding)
+    );
+}
 
-    &.icon-right {
-        & > i {
-            left: initial;
-            right: calc(
-                var(--input-border-width) + var(--input-padding-left-right) +
-                    var(--input-icon-extra-padding)
-            );
-        }
+div.input-wrapper.icon-right > .input {
+    padding: var(--input-padding-top-bottom)
+        calc(
+            var(--input-padding-left-right) * 2 + 1em + 1px +
+                (var(--input-icon-extra-padding) * 2)
+        )
+        var(--input-padding-top-bottom) var(--input-padding-left-right);
+}
 
-        & > input[type='text'],
-        & > input[type='email'],
-        & > input[type='password'] {
-            padding: var(--input-padding-top-bottom)
-                calc(
-                    var(--input-padding-left-right) * 2 + 1em + 1px +
-                        (var(--input-icon-extra-padding) * 2)
-                )
-                var(--input-padding-top-bottom) var(--input-padding-left-right);
-        }
-    }
+/* Modifier classes */
 
-    &.small {
-        font-size: 0.8rem;
-    }
+div.input-wrapper.small {
+    font-size: 0.8rem;
+}
 
-    &.large {
-        font-size: 1.2rem;
-    }
+div.input-wrapper.large {
+    font-size: 1.2rem;
+}
 
-    &.transparent {
-        --input-background-color-default: transparent;
-        --input-background-color-hover: transparent;
-        --input-background-color-active: transparent;
-        --input-background-color-focus: transparent;
+div.input-wrapper.transparent {
+    --input-background-color-default: transparent;
+    --input-background-color-hover: transparent;
+    --input-background-color-active: transparent;
+    --input-background-color-focus: transparent;
+}
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 1px;
-            top: 1px;
-            display: block;
-            width: calc(100% - 2px);
-            height: calc(100% - 2px);
-            border-radius: calc(var(--input-border-radius) - 1px);
-            background-color: rgba(255, 255, 255, 0);
-            transition: all 0.15s;
-        }
+div.input-wrapper.transparent::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    display: block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: calc(var(--input-border-radius) - 1px);
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.15s;
+}
+div.input-wrapper.transparent:hover::before {
+    background-color: rgba(255, 255, 255, 0.05);
+}
 
-        &:hover::before {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
+div.input-wrapper.transparent:active::before {
+    background-color: rgba(255, 255, 255, 0.05);
+}
 
-        &:active::before {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
+div.input-wrapper.transparent:focus-within::before {
+    background-color: rgba(255, 255, 255, 0.08);
+}
 
-        &:focus-within::before {
-            background-color: rgba(255, 255, 255, 0.08);
-        }
-    }
+/* Color modifier classes */
 
-    /* Color modifier classes */
+div.input-wrapper.red {
+    --input-border-color-focus: var(--color-red);
+}
 
-    &.red {
-        --input-border-color-focus: var(--color-red);
-    }
+div.input-wrapper.orange {
+    --input-border-color-focus: var(--color-orange);
+}
 
-    &.orange {
-        --input-border-color-focus: var(--color-orange);
-    }
+div.input-wrapper.yellow {
+    --input-border-color-focus: var(--color-yellow);
+}
 
-    &.yellow {
-        --input-border-color-focus: var(--color-yellow);
-    }
+div.input-wrapper.green {
+    --input-border-color-focus: var(--color-green);
+}
 
-    &.green {
-        --input-border-color-focus: var(--color-green);
-    }
+div.input-wrapper.blue {
+    --input-border-color-focus: var(--color-blue);
+}
 
-    &.blue {
-        --input-border-color-focus: var(--color-blue);
-    }
-
-    &.purple {
-        --input-border-color-focus: var(--color-purple);
-    }
+div.input-wrapper.purple {
+    --input-border-color-focus: var(--color-purple);
 }

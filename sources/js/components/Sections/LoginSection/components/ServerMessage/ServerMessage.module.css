@@ -9,30 +9,29 @@
     border-radius: 10px;
     color: var(--server-message-text-color-info);
     background-color: var(--server-message-background-color-info);
+}
 
-    & .server-message-delete:hover {
-        color: var(--server-message-border-color-info);
-    }
+.server-message-wrapper .server-message-delete:hover {
+    color: var(--server-message-border-color-info);
+}
 
-    &.error {
-        border-color: var(--server-message-border-color-error);
-        color: var(--server-message-text-color-error);
-        background-color: var(--server-message-background-color-error);
+.server-message-wrapper.error {
+    border-color: var(--server-message-border-color-error);
+    color: var(--server-message-text-color-error);
+    background-color: var(--server-message-background-color-error);
+}
+.server-message-wrapper.error .server-message-delete:hover {
+    color: var(--server-message-border-color-error);
+}
 
-        & .server-message-delete:hover {
-            color: var(--server-message-border-color-error);
-        }
-    }
+.server-message-wrapper.success {
+    border-color: var(--server-message-border-color-success);
+    color: var(--server-message-text-color-success);
+    background-color: var(--server-message-background-color-success);
+}
 
-    &.success {
-        border-color: var(--server-message-border-color-success);
-        color: var(--server-message-text-color-success);
-        background-color: var(--server-message-background-color-success);
-
-        & .server-message-delete:hover {
-            color: var(--server-message-border-color-success);
-        }
-    }
+.server-message-wrapper.success .server-message-delete:hover {
+    color: var(--server-message-border-color-success);
 }
 
 .server-message {
@@ -44,23 +43,23 @@
 .server-message-delete {
     position: relative;
     cursor: pointer;
+}
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: -3px;
-        left: -6px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 3px 6px;
-    }
+.server-message-delete::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -6px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 3px 6px;
+}
 
-    &:hover {
-        color: var(--color-blue);
-    }
+.server-message-delete:hover {
+    color: var(--color-blue);
+}
 
-    &:active {
-        opacity: 0.6;
-    }
+.server-message-delete:active {
+    opacity: 0.6;
 }

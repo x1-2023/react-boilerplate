@@ -1,21 +1,21 @@
-.header-brand-text {
+.link {
     height: 100%;
     color: var(--header-brand-text);
     text-decoration: none;
+}
 
-    & > div {
-        width: auto;
-        height: 100%;
-        padding-right: 10px;
-        line-height: var(--header-height);
-        user-select: none;
+.text-wrapper {
+    width: auto;
+    height: 100%;
+    padding-right: 10px;
+    line-height: var(--header-height);
+    user-select: none;
+}
 
-        & > h1 {
-            font-weight: 500;
-            font-size: larger;
-            text-decoration: none;
-        }
-    }
+.text {
+    font-weight: 500;
+    font-size: larger;
+    text-decoration: none;
 }
 
 /* Mobile */

@@ -28,28 +28,28 @@ function Footer() {
 
             <div className={styles['info-brands']}>
                 <a
-                    className={styles['github']}
+                    className={`${styles['info-brands-link']} ${styles['github']}`}
                     href="https://github.com/0xF5T9"
                     target="_blank"
                 >
                     <MdiGithub />
                 </a>
                 <a
-                    className={styles['discord']}
+                    className={`${styles['info-brands-link']} ${styles['discord']}`}
                     href="https://discord.com/"
                     target="_blank"
                 >
                     <IcBaselineDiscord />
                 </a>
                 <a
-                    className={styles['youtube']}
+                    className={`${styles['info-brands-link']} ${styles['youtube']}`}
                     href="https://youtube.com/"
                     target="_blank"
                 >
                     <MdiYoutube />
                 </a>
                 <a
-                    className={styles['facebook']}
+                    className={`${styles['info-brands-link']} ${styles['facebook']}`}
                     href="https://facebook.com/"
                     target="_blank"
                 >

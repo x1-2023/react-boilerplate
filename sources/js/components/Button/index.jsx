@@ -46,7 +46,6 @@ const Button = forwardRef(function Button(
     ref
 ) {
     const classes = `${styles.button}
-
                      ${styles[color] || ''}
                      ${styles[size] || ''}
                      ${outline ? styles.outline : ''}
